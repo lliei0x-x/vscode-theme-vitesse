@@ -1,6 +1,6 @@
 import { toArray } from '@antfu/utils'
-import { getColors } from './primer'
 import { VitesseThemes } from './colors'
+import { getColors } from './primer'
 
 export default function getTheme({ style, name, soft = false, black = false }) {
   // Usage: `pick({ light: "lightblue", dark: "darkblue" })`
@@ -16,12 +16,12 @@ export default function getTheme({ style, name, soft = false, black = false }) {
   const primary = vitesse('primary')
 
   const border = soft ? vitesse('lowBorder') : vitesse('border')
-  const background = black ? '#000' : soft ? vitesse('lowBackground') : vitesse('background')
-  const activeBackground = black ? '#050505' : soft ? vitesse('lowActiveBackground') : vitesse('activeBackground')
+  const background = soft ? vitesse('lowBackground') : vitesse('background')
+  const activeBackground = soft ? vitesse('lowActiveBackground') : vitesse('activeBackground')
 
-  const selectionBackgroundInActive = pick({ light: '#22222208', dark: '#eeeeee08' })
-  const selectionBackgroundActive = pick({ light: '#22222215', dark: '#eeeeee15' })
-  const selectionBackground = pick({ light: '#22222215', dark: '#eeeeee15' })
+  const selectionBackgroundInActive = pick({ light: '#22222208', dark: '#689D6A25' })
+  const selectionBackgroundActive = pick({ light: '#22222215', dark: '#689D6A45' })
+  const selectionBackground = pick({ light: '#22222215', dark: '#689D6A45' })
 
   const theme = {
     name,
@@ -45,7 +45,7 @@ export default function getTheme({ style, name, soft = false, black = false }) {
       'button.hoverBackground': primary,
 
       'checkbox.background': activeBackground,
-      'checkbox.border': pick({ light: primer.gray[3], dark: primer.gray[1] }),
+      'checkbox.border': pick({ light: primer.gray[3], dark: primer.white }),
 
       'dropdown.background': background,
       'dropdown.border': border,
@@ -176,7 +176,7 @@ export default function getTheme({ style, name, soft = false, black = false }) {
       'panelTitle.inactiveForeground': primer.gray[5],
       'panelInput.border': pick({ light: primer.gray[2], dark: primer.gray[1] }),
 
-      'terminal.foreground': foreground,
+      'terminal.foreground': vitesse('white'),
       'terminal.selectionBackground': selectionBackground,
       'terminal.ansiBrightBlack': pick({ light: '#aaaaaa', dark: '#777777' }),
       'terminal.ansiBrightBlue': vitesse('blue'),
@@ -184,7 +184,7 @@ export default function getTheme({ style, name, soft = false, black = false }) {
       'terminal.ansiBrightGreen': vitesse('green'),
       'terminal.ansiBrightMagenta': vitesse('magenta'),
       'terminal.ansiBrightRed': vitesse('red'),
-      'terminal.ansiBrightWhite': pick({ light: '#dddddd', dark: '#ffffff' }),
+      'terminal.ansiBrightWhite': vitesse('white'),
       'terminal.ansiBrightYellow': vitesse('yellow'),
       'terminal.ansiBlack': pick({ light: VitesseThemes.background[0], dark: VitesseThemes.foreground[1] }),
       'terminal.ansiBlue': vitesse('blue'),
@@ -192,7 +192,7 @@ export default function getTheme({ style, name, soft = false, black = false }) {
       'terminal.ansiGreen': vitesse('green'),
       'terminal.ansiMagenta': vitesse('magenta'),
       'terminal.ansiRed': vitesse('red'),
-      'terminal.ansiWhite': pick({ light: VitesseThemes.foreground[0], dark: VitesseThemes.foreground[0] }),
+      'terminal.ansiWhite': vitesse('white'),
       'terminal.ansiYellow': vitesse('yellow'),
 
       'gitDecoration.addedResourceForeground': vitesse('green'),
@@ -267,6 +267,8 @@ export default function getTheme({ style, name, soft = false, black = false }) {
           'delimiter.bracket',
           'delimiter',
           'invalid.illegal.character-not-allowed-here.html',
+          'keyword.operator.assignment',
+          'keyword.operator.assignment',
           'keyword.operator.rest',
           'keyword.operator.spread',
           'keyword.operator.type.annotation',
@@ -367,6 +369,13 @@ export default function getTheme({ style, name, soft = false, black = false }) {
       {
         scope: [
           'punctuation.definition.string',
+        ],
+        settings: {
+          foreground: vitesse('string', 'aa'),
+        },
+      },
+      {
+        scope: [
           'punctuation.support.type.property-name',
         ],
         settings: {

@@ -1,9 +1,9 @@
 {
-  "name": "theme-vitesse",
-  "displayName": "Vitesse Theme",
-  "version": "0.5.2",
+  "name": "lliei0x-theme-vitesse",
+  "displayName": "Vitesse Theme for lliei0x",
+  "version": "1.0.0",
   "packageManager": "pnpm@7.5.0",
-  "description": "Vitesse theme for VS Code",
+  "description": "fork Vitesse theme .The theme for VS Code",
   "categories": [
     "Themes"
   ],
@@ -16,15 +16,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antfu/vscode-theme-vitesse"
+    "url": "https://github.com/lliei0x/vscode-theme-vitesse"
   },
   "files": [
     "themes"
   ],
   "bugs": {
-    "url": "https://github.com/antfu/vscode-theme-vitesse/issues"
+    "url": "https://github.com/lliei0x/vscode-theme-vitesse/issues"
   },
-  "publisher": "antfu",
+  "publisher": "lliei0x",
   "scripts": {
     "build": "esno src/index.ts",
     "dev": "nodemon --watch src -e ts --exec \"esno src/index.ts\"",

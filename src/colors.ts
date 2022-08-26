@@ -49,11 +49,12 @@ export const VitesseThemes = {
   regex: ['#c4704f', '#ab5e3f'],
 
   // colors
-  green: ['#4d9375', '#1e754f'],
-  cyan: ['#5eaab5', '#2993a3'],
-  blue: ['#6394bf', '#296aa3'],
-  red: ['#cb7676', '#ab5959'],
-  orange: ['#d4976c', '#a65e2b'],
-  yellow: ['#e6cc77', '#bda437'],
-  magenta: ['#d9739f', '#a13865'],
+  green: ['#8EC07C', '#8EC07C'],
+  cyan: ['#9CA761', '#9CA761'],
+  blue: ['#83A598', '#83A598'],
+  red: ['#D64A4A', '#D64A4A'],
+  orange: ['#d4976c', '#d4976c'],
+  yellow: ['#FABD2F', '#FABD2F'],
+  magenta: ['#D3869B', '#D3869B'],
+  white: ['#DFCDA0', '#DFCDA0']
 }
