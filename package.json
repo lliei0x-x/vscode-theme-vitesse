@@ -30,7 +30,8 @@
     "dev": "nodemon --watch src -e ts --exec \"esno src/index.ts\"",
     "vscode:prepublish": "npm run build",
     "lint": "eslint .",
-    "release": "npm run build && npx bumpp --commit --tag --push --all && vsce publish --no-dependencies"
+    "release": "npm run build && npx bumpp --commit --tag --push --all && vsce publish --no-dependencies",
+    "package": "vsce package"
   },
   "contributes": {
     "themes": [
