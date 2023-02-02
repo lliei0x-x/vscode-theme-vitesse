@@ -1,7 +1,7 @@
 {
   "name": "lliei0x-theme-vitesse",
   "displayName": "Vitesse Theme for lliei0x",
-  "version": "1.0.0",
+  "version": "0.6.2",
   "packageManager": "pnpm@7.5.0",
   "description": "fork Vitesse theme .The theme for VS Code",
   "categories": [

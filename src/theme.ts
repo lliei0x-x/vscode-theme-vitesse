@@ -393,7 +393,7 @@ export default function getTheme({ style, name, soft = false, black = false }) {
           'punctuation.support.type.property-name',
         ],
         settings: {
-          foreground: vitesse('string', 'aa'),
+          foreground: vitesse('string', '99'),
         },
       },
       {
@@ -497,12 +497,6 @@ export default function getTheme({ style, name, soft = false, black = false }) {
         scope: 'message.error',
         settings: {
           foreground: primer.red[7],
-        },
-      },
-      {
-        scope: 'string source',
-        settings: {
-          foreground,
         },
       },
       {
